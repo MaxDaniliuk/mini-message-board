@@ -1,0 +1,19 @@
+{
+  "name": "mini-message-board",
+  "version": "1.0.0",
+  "description": "mini-message-board build with express and ejs templating language",
+  "main": "app.js",
+  "scripts": {
+    "pretty": "prettier --write '**/*.{css,js,json}'",
+    "dev": "node --watch app.js"
+  },
+  "author": "Maksim Daniliuk",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
