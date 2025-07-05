@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/head") %>
+<body>
+    <header>Mini Message Board</header>
+    <main class="main">
+        <% if (isForm) { %>
+            <%- include("components/form") %>
+            
+        <% } else { %>
+            <%- include("components/messages") %>
+        <% } %>
+    </main>
+    <%- include("partials/footer") %>
+</body>
+</html>
