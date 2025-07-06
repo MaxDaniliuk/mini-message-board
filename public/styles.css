@@ -70,3 +70,72 @@ li.message > p > span:last-child {
 li.message > p:first-child {
   font-size: 1.15rem;
 }
+
+#form {
+  color: #e7e5e4;
+  background-color: #1e293b;
+  padding: 1em;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  border-radius: 15px;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+#form > h2 {
+  text-align: center;
+}
+
+.fields-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+#form label,
+#form input,
+#form textarea {
+  font-size: 1rem;
+}
+
+#form input,
+#form textarea {
+  width: 100%;
+  display: block;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: none;
+  background-color: #475569;
+  color: #e7e5e4;
+  padding: 0.2em;
+  font-size: 1rem;
+  margin-top: 0.2em;
+}
+
+textarea#text {
+  min-height: 20ch;
+  resize: none;
+  field-sizing: content;
+  margin-bottom: 0.5em;
+}
+
+.btn {
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.submit {
+  font-weight: bold;
+  border: none;
+  background-color: #e7e5e4;
+  color: #991b1b;
+}
+
+.submit:hover {
+  background-color: #991b1b;
+  color: #e7e5e4;
+}

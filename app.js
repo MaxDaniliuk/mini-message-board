@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const messagesController = require("./controllers/messagesController");
+const messageRoutes = require("./routes/messageRoutes");
 
 const app = express();
 PORT = 3000;
@@ -11,7 +12,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", messagesController.getMessages);
 
-app.get("/new", (req, res) => res.send("Message to be added"));
+app.get("/new", messagesController.getNewMessage);
 
 app.listen(PORT, () => {
   console.log(`App is running on the http://localhost:${PORT}/`);
