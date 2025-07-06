@@ -3,7 +3,13 @@
   <%- include("partials/head") %>
   <body>
     <header>
-      <h1 class="header">Mini Message Board</h1>
+      <a href="/"><h1 class="header">Mini Message Board</h1></a>
+      <nav id="nav">
+        <ul>
+          <li><a href="/">Messages</a></li>
+          <li><a href="/new">New message</a></li>
+        </ul>
+      </nav>
     </header>
     <main class="main">
       <% if (isForm) { %> <%- include("components/form") %> <% } else { %> <%-
