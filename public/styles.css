@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+a,
+ul {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+h1.header {
+  font-size: 2rem;
+  color: #1e293b;
+  padding: 0.5em;
+  border-bottom: solid 1px #475569;
+}
+
+body {
+  background-color: #e7e5e4;
+  font-size: 16px;
+  font-family: "Noto Serif", serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+  color: #1e293b;
+  padding: 0.5em;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+main {
+  padding: 1em;
+}
+
+ul.messages {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+li.message {
+  border-left: 3px solid #991b1b;
+  padding-left: 0.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+
+li.message > p > span:last-child {
+  font-size: 0.85rem;
+}
+li.message > p:first-child {
+  font-size: 1.15rem;
+}

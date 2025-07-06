@@ -1,4 +1,4 @@
-<ul>
+<ul class="messages">
   <% messages.forEach(message => { %>
   <%- include('../partials/message', {text: message.text, user: message.user, added: message.added}); %>
   <% }); %>
