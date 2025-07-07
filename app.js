@@ -16,6 +16,10 @@ app.get("/", messagesController.getMessages);
 app.delete("/:id", messagesController.deleteMessage);
 app.use("/new", messageRoutes);
 
+app.use((req, res) => {
+  res.status(404).render("404", { title: "404" });
+});
+
 app.listen(PORT, () => {
   console.log(`App is running on the http://localhost:${PORT}/`);
 });
