@@ -23,7 +23,7 @@ header {
   border-bottom: solid 1px #475569;
   color: #1e293b;
   padding: 0.5em;
-  
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -88,6 +88,12 @@ li.message > p > span:last-child {
 }
 li.message > p:first-child {
   font-size: 1.15rem;
+}
+
+.message div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #form {
@@ -157,4 +163,8 @@ textarea#text {
 .submit:hover {
   background-color: #991b1b;
   color: #e7e5e4;
+}
+
+.delete {
+  padding: 0.3em 0.5em;
 }

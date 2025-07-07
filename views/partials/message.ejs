@@ -1,9 +1,11 @@
-<li class="message">
+<li class="message" data-id="<%= id %>">
   <p><%= text %></p>
-  <p />
-  <p>
-    <span><%= user %></span>
-    <span>|</span>
-    <span><i><%= added.toLocaleString() %></i></span>
-  </p>
+  <div>
+    <p>
+      <span><%= user %></span>
+      <span>|</span>
+      <span><i><%= added.toLocaleString() %></i></span>
+    </p>
+    <button class="btn delete">Delete</button>
+  </div>
 </li>

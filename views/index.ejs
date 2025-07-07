@@ -2,18 +2,13 @@
 <html lang="en">
   <%- include("partials/head") %>
   <body>
-    <header>
-      <a href="/"><h1 class="header">Mini Message Board</h1></a>
-      <nav id="nav">
-        <ul>
-          <li><a href="/">Messages</a></li>
-          <li><a href="/new">New message</a></li>
-        </ul>
-      </nav>
-    </header>
+    <%- include("partials/header") %>
     <main class="main">
-      <% if (isForm) { %> <%- include("components/form") %> <% } else { %> <%-
-      include("components/messages") %> <% } %>
+      <ul class="messages">
+        <% messages.forEach(message => { %>
+        <%- include('./partials/message', {id: message.id, text: message.text, user: message.user, added: message.added}); %>
+        <% }); %>
+      </ul>
     </main>
     <%- include("partials/footer") %>
   </body>
