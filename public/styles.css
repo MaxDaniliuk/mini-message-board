@@ -109,6 +109,20 @@ li.message > p:first-child {
   box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
+.error-block {
+  font-size: 2.5rem;
+  color: #1e293b;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.error-block > p:first-child {
+  font-size: 4rem;
+}
+
 #form > h2 {
   text-align: center;
 }
@@ -165,6 +179,7 @@ textarea#text {
   color: #e7e5e4;
 }
 
-.delete {
+a.delete {
+  cursor: pointer;
   padding: 0.3em 0.5em;
 }
