@@ -12,4 +12,27 @@
     </main>
     <%- include("partials/footer") %>
   </body>
+
+  <script>
+    const trashcans = document.querySelectorAll(".delete");
+
+    trashcans.forEach((trashcan) => {
+      trashcan.addEventListener("click", async (e) => {
+        const endpoint = `/${e.currentTarget.dataset.id}`;
+
+        const res = await fetch(endpoint, {
+          method: "DELETE",
+        });
+
+        if (res.ok) {
+          const liElement = e.target.closest("li");
+          if (liElement) {
+            liElement.remove();
+          }
+        } else {
+          console.error("Failed to delete message.");
+        }
+      });
+    });
+  </script>
 </html>

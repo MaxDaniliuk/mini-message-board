@@ -1,4 +1,4 @@
-<li class="message" data-id="<%= id %>">
+<li class="message">
   <p><%= text %></p>
   <div>
     <p>
@@ -6,6 +6,8 @@
       <span>|</span>
       <span><i><%= added.toLocaleString() %></i></span>
     </p>
-    <button class="btn delete">Delete</button>
+    <a class="delete" data-id="<%= id %>">
+      <img src="/trashcan.svg" alt="delete icon" />
+    </a>
   </div>
 </li>

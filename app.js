@@ -13,6 +13,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", messagesController.getMessages);
+app.delete("/:id", messagesController.deleteMessage);
 app.use("/new", messageRoutes);
 
 app.listen(PORT, () => {
