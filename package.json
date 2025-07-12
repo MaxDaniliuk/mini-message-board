@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "pretty": "prettier --write '**/*.{css,js,json}' && prettier --plugin=prettier-plugin-ejs --write .",
-    "dev": "node --watch app.js"
+    "dev": "node --watch app.js",
+    "start": "node app.js"
   },
   "author": "Maksim Daniliuk",
   "license": "ISC",
