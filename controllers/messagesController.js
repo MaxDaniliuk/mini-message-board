@@ -1,13 +1,13 @@
-const { messages, removeMessage } = require("../model/messages");
-const uuid = require("uuid");
+const db = require("../db/queries");
 
-const getMessages = (req, res) => {
+const getMessages = async (req, res) => {
+  const messages = await db.getAllMessages();
   res.render("index", { title: "Messages", messages: messages });
 };
 
-const deleteMessage = (req, res) => {
+const deleteMessage = async (req, res) => {
   const { id } = req.params;
-  removeMessage(id);
+  await db.deleteMessage(id);
   return res.status(200).end();
 };
 
@@ -15,14 +15,9 @@ const createMessageGet = (req, res) => {
   res.render("form", { title: "Messages" });
 };
 
-const createMessagePost = (req, res) => {
-  const { user, text } = req.body;
-  messages.push({
-    id: uuid.v4(),
-    text: text,
-    user: user,
-    added: new Date(),
-  });
+const createMessagePost = async (req, res) => {
+  const { username, text } = req.body;
+  await db.insertMessage([text, username]);
   res.redirect("/");
 };
 

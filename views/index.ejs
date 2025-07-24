@@ -5,9 +5,13 @@
     <%- include("partials/header") %>
     <main class="main">
       <ul class="messages">
-        <% messages.forEach(message => { %>
-        <%- include('./partials/message', {id: message.id, text: message.text, user: message.user, added: message.added}); %>
-        <% }); %>
+        <% if (messages.length > 0 ) { %>
+          <% messages.forEach(message => { %>
+          <%- include('./partials/message', {id: message.id, text: message.text, username: message.username, added: message.added}); %>
+          <% }); %>
+        <% } else { %>
+          <p>There are no messages...</p>
+        <% } %>
       </ul>
     </main>
     <%- include("partials/footer") %>
